@@ -85,9 +85,9 @@ The attack begins when a user executes a malicious `.hta` file delivered through
 Detect mshta being used to execute HTA files from user-writable directories, which strongly indicates malicious payload execution rather than legitimate enterprise usage.
 
 📄 Case study  
-`case_studies/Malicious_MSHTA_Execution.txt`  
+`Case-Studies/Malicious_MSHTA_Execution.txt`  
 🛡 Sigma rule  
-`sigma_rules/Malicious_MSHTA_Execution.yaml`
+`Sigma_Rules/Suspicious Mshta HTA Execution.yaml`
 
 ---
 
@@ -100,9 +100,9 @@ Once code execution is achieved, the attacker uses `certutil.exe` to download a 
 Detect certutil downloading files from remote URLs using `-urlcache -split -f`, a highly suspicious pattern rarely used in legitimate operations.
 
 📄 Case study  
-`case_studies/Malicious_Certutil_Download.txt`  
+`Case-Studies/Malicious_Certutil_Download.txt`  
 🛡 Sigma rule  
-`sigma_rules/Malicious_Certutil_Download.yaml`
+`Sigma_Rules/Suspicious Certutil File Download.yaml`
 
 ---
 
@@ -115,9 +115,9 @@ PowerShell is used to download and execute reconnaissance scripts directly in me
 Detect PowerShell using `DownloadString`, `Invoke-AllChecks`, and WebClient patterns indicating fileless script execution.
 
 📄 Case study  
-`case_studies/PowerShell_Enumeration.txt`  
+`Case-Studies/PowerShell_Enumeration.txt`  
 🛡 Sigma rule  
-`sigma_rules/PowerShell_Enumeration.yaml`
+`Sigma_Rules/Powershell Enumeration.yaml`
 
 ---
 
@@ -130,9 +130,9 @@ The attacker launches a reverse shell using `nc.exe`, connecting back to their s
 Detect netcat executing with `-e cmd.exe`, which is a hallmark of reverse shell activity.
 
 📄 Case study  
-`case_studies/Netcat_Reverse_Shell.txt`  
+`Case-Studies/Netcat_Reverse_Shell.txt`  
 🛡 Sigma rule  
-`sigma_rules/Netcat_Reverse_Shell.yaml`
+`Sigma_Rules/Netcat Reverse Shell Execution.yaml`
 
 ---
 
@@ -145,9 +145,9 @@ Sensitive user files are collected and compressed into a password-protected ZIP 
 Detect 7-Zip creating encrypted archives inside user directories.
 
 📄 Case study  
-`case_studies/Archive_Staging.txt`  
+`Case-Studies/Archive_Staging.txt`  
 🛡 Sigma rule  
-`sigma_rules/Archive_Staging.yaml`
+`Sigma_Rules/Suspicious Archive.yaml`
 
 ---
 
@@ -160,9 +160,9 @@ The attacker configures a malicious executable to run at the next system boot us
 Detect `reg.exe` modifying `CurrentVersion\RunOnce`.
 
 📄 Case study  
-`case_studies/RunOnce_Persistence.txt`  
+`Case-Studies/RunOnce_Persistence.txt`  
 🛡 Sigma rule  
-`sigma_rules/RunOnce_Persistence.yaml`
+`Sigma_Rules/RunOnce Persistence.yaml`
 
 ---
 
@@ -175,9 +175,9 @@ A legitimate Windows service is modified so it executes a malicious binary, gran
 Detect `sc.exe` modifying service `binPath` values.
 
 📄 Case study  
-`case_studies/Service_Hijack.txt`  
+`Case-Studies/Service_Hijack.txt`  
 🛡 Sigma rule  
-`sigma_rules/Service_Hijack.yaml`
+`Sigma_Rules/Service Binary Modification.yaml`
 
 ---
 
@@ -190,9 +190,9 @@ The staged ZIP archive is uploaded to an attacker-controlled server using `curl.
 Detect HTTP POSTs using curl with ZIP files.
 
 📄 Case study  
-`case_studies/Curl_Exfiltration.txt`  
+`Case-Studies/Curl_Exfiltration.txt`  
 🛡 Sigma rule  
-`sigma_rules/Curl_Exfiltration.yaml`
+`Sigma_Rules/Curl Data Exfiltration.yaml`
 
 ---
 
@@ -205,9 +205,9 @@ The ransomware encrypts files and appends a custom extension, marking the impact
 Detect mass file modifications with ransomware-style extensions using Sysmon Event ID 11.
 
 📄 Case study  
-`case_studies/Ransomware_Encryption.txt`  
+`Case-Studies/Ransomware_Encryption.txt`  
 🛡 Sigma rule  
-`sigma_rules/Ransomware_Encryption.yaml`
+`Sigma_Rules/Ransomware File Encryption.yaml`
 
 ---
 # 🧭 MITRE ATT&CK Coverage
