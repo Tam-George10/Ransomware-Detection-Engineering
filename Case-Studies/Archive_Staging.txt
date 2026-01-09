@@ -1,0 +1,21 @@
+Field:	Value
+CommandLine:	7z a exfil.zip * -p
+Company:	Igor Pavlov
+CurrentDirectory:	C:\Users\victim\Documents\
+Description:	7-Zip Console
+EventID:	1
+FileVersion:	22.01
+Hashes:	MD5=FE522D8659618E3A50AAFD8AC1518638,SHA256=254CF6411D38903B2440819F7E0A847F0CFEE7F8096CFAD9E90FEA62F42B0C23,IMPHASH=C40FA24FE18ADB90DF2122CA10E52AB2
+Image:	C:\Program Files\7-Zip\7z.exe
+IntegrityLevel:	System
+LogonGuid:	{4bbef3ae-819b-630c-e703-000000000000}
+LogonId	:0x3e7
+OriginalFileName:	7z.exe
+ParentCommandLine:	cmd.exe
+ParentImage:	C:\Windows\System32\cmd.exe
+ParentProcessGuid:	{4bbef3ae-cc43-630c-1610-000000000e00}
+ParentProcessId:	3344
+ParentUser:	NT AUTHORITY\SYSTEM
+ProcessGuid:	{4bbef3ae-cc54-630c-1810-000000000e00}
+ProcessId:	10664
+Product:    7-Zip
