@@ -1,0 +1,55 @@
+title: Netcat Reverse Shell Execution
+id: 57a5452d-8778-4b14-888c-aa3ab6c669af
+status: stable
+description: Detects execution of netcat with command shell redirection or known malicious hash
+author: Tam-George Belema
+date: 2025-09-20
+modified: 2025-09-20
+
+logsource:
+  product: windows
+  service: sysmon
+
+detection:
+  selection_event:
+    EventID: 1
+
+  selection_image:
+    Image|endswith:
+      - '\nc.exe'
+      - '\netcat.exe'
+
+  selection_reverse_shell:
+    CommandLine|contains:
+      - '-e'
+      - 'cmd.exe'
+      - 'powershell'
+      - 'bash'
+
+  selection_hash:
+    Hashes|contains:
+      - 'MD5=523613A7B9DFA398CBD5EBD2DD0F4F38'
+      - 'SHA256=3E59379F585EBF0BECB6B4E06D0FBBF806DE28A4BB256E837B4555F1B4245571'
+
+  condition: selection_event and selection_image and (selection_reverse_shell or selection_hash)
+
+fields:
+  - EventID
+  - Image
+  - CommandLine
+  - Hashes
+  - ParentImage
+  - ParentCommandLine
+  - User
+  - CurrentDirectory
+
+falsepositives:
+  - Authorized penetration testing or red-team use of netcat
+
+level: critical
+
+tags:
+  - attack.command_and_control
+  - attack.t1059   # Command and Scripting Interpreter
+  - attack.t1105   # Ingress Tool Transfer
+  - attack.t1071   # Application Layer Protocol

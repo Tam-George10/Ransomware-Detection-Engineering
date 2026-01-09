@@ -1,0 +1,46 @@
+title: Windows RunOnce Registry Persistence
+id: 524f1d30-d0c4-484c-9b21-f41b184c7067
+status: stable
+description: Detects creation or modification of RunOnce registry keys using reg.exe for persistence
+author: Tam-George Belema
+date: 2025-09-20
+modified: 2025-09-20
+
+logsource:
+  product: windows
+  service: sysmon
+
+detection:
+  selection_event:
+    EventID: 1
+
+  selection_image:
+    Image|endswith:
+      - '\reg.exe'
+
+  selection_command:
+    CommandLine|contains:
+      - 'CurrentVersion\RunOnce'
+      - 'add'
+      - '/v'
+      - '/d'
+
+  condition: selection_event and selection_image and selection_command
+
+fields:
+  - EventID
+  - Image
+  - CommandLine
+  - ParentImage
+  - ParentCommandLine
+  - User
+  - CurrentDirectory
+
+falsepositives:
+  - Software installers legitimately registering RunOnce startup entries
+
+level: critical
+
+tags:
+  - attack.persistence
+  - attack.t1547.001   # Registry Run Keys / Startup Folder

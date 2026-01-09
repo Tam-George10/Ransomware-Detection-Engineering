@@ -1,0 +1,48 @@
+title: Suspicious Certutil File Download
+id: c483a9b2-d909-4d58-9b73-62881dee7da8
+status: stable
+description: Detects abuse of certutil.exe to download files from the internet (LOLBIN technique)
+author: Tam-George Belema
+date: 2025-09-20
+modified: 2025-09-20
+
+logsource:
+  product: windows
+  service: sysmon
+
+detection:
+  selection_event:
+    EventID: 1
+
+  selection_image:
+    Image|endswith:
+      - '\certutil.exe'
+
+  selection_command:
+    CommandLine|contains:
+      - '-urlcache'
+      - '-split'
+      - '-f'
+      - 'http://'
+      - 'https://'
+
+  condition: selection_event and selection_image and selection_command
+
+fields:
+  - EventID
+  - Image
+  - CommandLine
+  - ParentImage
+  - ParentCommandLine
+  - User
+  - CurrentDirectory
+
+falsepositives:
+  - Administrators downloading certificates or files using certutil
+
+level: high
+
+tags:
+  - attack.command_and_control
+  - attack.t1105   # Ingress Tool Transfer
+  - attack.t1218   # Signed Binary Proxy Execution

@@ -1,0 +1,48 @@
+title: Curl Data Exfiltration via HTTP POST
+id: 012bbc4f-70ec-4a01-900d-4783f37138b1
+status: stable
+description: Detects use of curl to upload local files to remote servers, commonly used for data exfiltration
+author: Tam-George Belema
+date: 2025-09-20
+modified: 2025-09-20
+
+logsource:
+  product: windows
+  service: sysmon
+
+detection:
+  selection_event:
+    EventID: 1
+
+  selection_image:
+    Image|endswith:
+      - '\curl.exe'
+
+  selection_command:
+    CommandLine|contains|all:
+      - '-d'
+      - '@'
+      - '.zip'
+      - 'http'
+
+  condition: selection_event and selection_image and selection_command
+
+fields:
+  - EventID
+  - Image
+  - CommandLine
+  - Hashes
+  - ParentImage
+  - ParentCommandLine
+  - User
+  - CurrentDirectory
+
+falsepositives:
+  - Developers or automation scripts uploading files via curl
+  - Backup or CI/CD systems using HTTP POST
+
+level: critical
+
+tags:
+  - attack.exfiltration
+  - attack.t1041   # Exfiltration Over C2 Channel

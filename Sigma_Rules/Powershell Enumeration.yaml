@@ -1,0 +1,50 @@
+title: Suspicious In-Memory PowerShell Script Execution
+id: cd114390-064c-4028-8316-170cb1707a91
+status: stable
+description: Detects PowerShell downloading and executing remote scripts in memory (fileless attack behavior)
+author: Tam-George Belema
+date: 2025-09-20
+modified: 2025-09-20
+
+logsource:
+  product: windows
+  service: sysmon
+
+detection:
+  selection_event:
+    EventID: 1
+
+  selection_image:
+    Image|endswith:
+      - '\powershell.exe'
+
+  selection_command:
+    CommandLine|contains:
+      - 'iex'
+      - 'downloadstring'
+      - 'new-object'
+      - 'net.webclient'
+      - 'http://'
+      - 'https://'
+
+  condition: selection_event and selection_image and selection_command
+
+fields:
+  - EventID
+  - Image
+  - CommandLine
+  - ParentImage
+  - ParentCommandLine
+  - User
+  - CurrentDirectory
+
+falsepositives:
+  - Rare administrative PowerShell automation using WebClient
+
+level: critical
+
+tags:
+  - attack.execution
+  - attack.t1059.001   # PowerShell
+  - attack.t1105      # Ingress Tool Transfer
+  - attack.t1027      # Obfuscated / In-Memory Payloads

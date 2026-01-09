@@ -1,0 +1,39 @@
+title: Ransomware File Encryption (HUNTME Extension)
+id: 18918c7e-610b-433d-81f6-dcdfbeda5f92
+status: stable
+description: Detects ransomware encrypting files by creating new files with the .huntme extension
+author: Tam-George Belema
+date: 2025-09-20
+modified: 2025-09-20
+
+logsource:
+  product: windows
+  service: sysmon
+
+detection:
+  selection_event:
+    EventID: 11
+
+  selection_extension:
+    TargetFilename|endswith:
+      - '.huntme'
+
+  condition: selection_event and selection_extension
+
+fields:
+  - EventID
+  - Image
+  - TargetFilename
+  - ProcessGuid
+  - ProcessId
+  - User
+  - UtcTime
+
+falsepositives:
+  - None (custom ransomware file extension)
+
+level: critical
+
+tags:
+  - attack.impact
+  - attack.t1486   # Data Encrypted for Impact
