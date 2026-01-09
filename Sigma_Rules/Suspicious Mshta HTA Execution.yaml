@@ -1,0 +1,46 @@
+title: Suspicious Mshta HTA Execution
+id: 1a445fc4-6017-426a-9cbe-8b76eac90f69
+status: stable
+description: Detects execution of HTA files or remote scripts using mshta.exe (LOLBIN abuse)
+author: Tam-George Belema
+date: 2025-09-20
+modified: 2025-09-20
+
+logsource:
+  product: windows
+  service: sysmon
+
+detection:
+  selection_event:
+    EventID: 1
+
+  selection_image:
+    Image|endswith:
+      - '\mshta.exe'
+
+  selection_command:
+    CommandLine|contains:
+      - '.hta'
+      - 'http://'
+      - 'https://'
+      - 'javascript:'
+
+  condition: selection_event and selection_image and selection_command
+
+fields:
+  - EventID
+  - Image
+  - CommandLine
+  - ParentImage
+  - ParentCommandLine
+  - User
+  - CurrentDirectory
+
+falsepositives:
+  - Rare enterprise applications using HTA internally
+
+level: high
+
+tags:
+  - attack.execution
+  - attack.t1218.005   # Signed Binary Proxy Execution: Mshta
