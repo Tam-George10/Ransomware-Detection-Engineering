@@ -1,0 +1,10 @@
+Field: 	Value
+CreationUtcTime:	2022-08-29 14:21:47.976
+EventID:	11
+Image:	C:\Users\victim\ransom.exe
+ProcessGuid:	{4bbef3ae-ccee-630c-3310-000000000e00}
+ProcessId:	1364
+RuleName:	-
+TargetFilename:	C:\Users\victim\Documents\Confidential Files\Finance Records.xlsx.huntme
+User:	NT AUTHORITY\SYSTEM
+UtcTime:	2022-08-29 14:27:58.336

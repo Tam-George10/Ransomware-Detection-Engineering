@@ -1,0 +1,25 @@
+ Malicious mshta - Sysmon Logs
+Field: 	Value
+CommandLine:	"C:\Windows\SysWOW64\mshta.exe" "C:\Users\victim\Downloads\update.hta" {1E460BD7-F1C3-4B2E-88BF-4E770A288AF5}{1E460BD7-F1C3-4B2E-88BF-4E770A288AF5}
+Company:	Microsoft Corporation
+CurrentDirectory:	C:\Users\victim\Downloads\
+Description:	Microsoft (R) HTML Application host
+EventID:	1
+FileVersion:	11.00.17763.1 (WinBuild.160101.0800)
+Hashes:	MD5=4DBAFC3C0B7A9CAA67D6C2C3D99422F2,SHA256=12C94C614FB752DC1F6797B5FB3AD67719E3C924FACDA35DC36792C8E5AC45FC,IMPHASH=4CB8A74361E70A5FF774A0A1A7C65989
+Image:	C:\Windows\SysWOW64\mshta.exe
+IntegrityLevel:	Medium
+LogonGuid:	{4bbef3ae-81e4-630c-b94b-100000000000}
+LogonId:	0x104bb9
+OriginalFileName:	MSHTA.EXE
+ParentCommandLine:	"C:\Program Files\Google\Chrome\Application\chrome.exe"
+ParentImage:	C:\Program Files\Google\Chrome\Application\chrome.exe
+ParentProcessGuid:	{4bbef3ae-beec-630c-900a-000000000e00}
+ParentProcessId: 1708
+ParentUser:	User\victim
+ProcessGuid:	{4bbef3ae-cbcf-630c-010f-000000000e00}
+ProcessId:	8820
+Product:	Internet Explorer
+RuleName:	-
+TerminalSessionId:	2
+User:	User\victim

@@ -1,0 +1,23 @@
+Field: 	Value
+CommandLine:	reg add "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunOnce" /v MicrosoftUpdate /t REG_SZ /d "C:\Windows\System32\cmdd.exe"
+Company:	Microsoft Corporation
+CurrentDirectory:	C:\Windows\system32\
+Description:	Registry Console Tool
+EventID:	1
+FileVersion:	10.0.17763.1 (WinBuild.160101.0800)
+Hashes:	MD5=8A93ACAC33151793F8D52000071C0B06,SHA256=19316D4266D0B776D9B2A05D5903D8CBC8F0EA1520E9C2A7E6D5960B6FA4DCAF,IMPHASH=BE482BE427FE212CFEF2CDA0E61F19AC
+Image:	C:\Windows\System32\reg.exe
+IntegrityLevel:	System
+LogonGuid:	{4bbef3ae-819b-630c-e703-000000000000}
+LogonId:	0x3e7
+OriginalFileName:	reg.exe
+ParentCommandLine:	cmd.exe
+ParentImage:	C:\Windows\System32\cmd.exe
+ParentProcessGuid:	{4bbef3ae-cc1f-630c-1010-000000000e00}
+ParentProcessId:	12508
+ParentUser:	NT AUTHORITY\SYSTEM
+ProcessGuid:	{4bbef3ae-cc25-630c-1210-000000000e00}
+ProcessId:	6624
+Product:	Microsoft® Windows® Operating System
+RuleName:	-
+TerminalSessionId:	0
