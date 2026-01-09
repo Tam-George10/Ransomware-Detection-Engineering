@@ -87,7 +87,7 @@ Detect mshta being used to execute HTA files from user-writable directories, whi
 📄 Case study  
 [Malicious_MSHTA_Execution.txt](Case-Studies/Malicious_MSHTA_Execution.txt)  
 🛡 Sigma rule  
-[Suspicious Mshta HTA Execution.yaml](Sigma_Rules/Suspicious Mshta HTA Execution.yaml)
+[Suspicious Mshta HTA Execution.yaml](Sigma_Rules/Suspicious_Mshta_HTA_Execution.yaml)
 
 ---
 
@@ -102,7 +102,7 @@ Detect certutil downloading files from remote URLs using `-urlcache -split -f`, 
 📄 Case study  
 [Malicious_Certutil_Download.txt](Case-Studies/Malicious_Certutil_Download.txt)  
 🛡 Sigma rule  
-[Suspicious Certutil File Download.yaml](Sigma_Rules/Suspicious Certutil File Download.yaml)
+[Suspicious Certutil File Download.yaml](Sigma_Rules/Suspicious_Certutil_File_Download.yaml)
 
 ---
 
@@ -117,7 +117,7 @@ Detect PowerShell using `DownloadString`, `Invoke-AllChecks`, and WebClient patt
 📄 Case study  
 [PowerShell_Enumeration.txt](Case-Studies/PowerShell_Enumeration.txt)  
 🛡 Sigma rule  
-[Powershell Enumeration.yaml](Sigma_Rules/Powershell Enumeration.yaml)
+[Powershell Enumeration.yaml](Sigma_Rules/Powershell_Enumeration.yaml)
 
 ---
 
@@ -132,7 +132,7 @@ Detect netcat executing with `-e cmd.exe`, which is a hallmark of reverse shell 
 📄 Case study  
 [Netcat_Reverse_Shell.txt](Case-Studies/Netcat_Reverse_Shell.txt)  
 🛡 Sigma rule  
-[Netcat Reverse Shell Execution.yaml](Sigma_Rules/Netcat Reverse Shell Execution.yaml)
+[Netcat Reverse Shell Execution.yaml](Sigma_Rules/Netcat_Reverse_Shell_Execution.yaml)
 
 ---
 
@@ -147,7 +147,7 @@ Detect 7-Zip creating encrypted archives inside user directories.
 📄 Case study  
 [Archive_Staging.txt](Case-Studies/Archive_Staging.txt)  
 🛡 Sigma rule  
-[Suspicious Archive.yaml](Sigma_Rules/Suspicious Archive.yaml)
+[Suspicious Archive.yaml](Sigma_Rules/Suspicious_Archive.yaml)
 
 ---
 
@@ -162,7 +162,7 @@ Detect `reg.exe` modifying `CurrentVersion\RunOnce`.
 📄 Case study  
 [RunOnce_Persistence.txt](Case-Studies/RunOnce_Persistence.txt)  
 🛡 Sigma rule  
-[RunOnce Persistence.yaml](Sigma_Rules/RunOnce Persistence.yaml)
+[RunOnce Persistence.yaml](Sigma_Rules/RunOnce_Persistence.yaml)
 
 ---
 
@@ -177,7 +177,7 @@ Detect `sc.exe` modifying service `binPath` values.
 📄 Case study  
 [Service_Hijack.txt](Case-Studies/Service_Hijack.txt)  
 🛡 Sigma rule  
-[Service Binary Modification.yaml](Sigma_Rules/Service Binary Modification.yaml)
+[Service Binary Modification.yaml](Sigma_Rules/Service_Binary_Modification.yaml)
 
 ---
 
@@ -192,7 +192,7 @@ Detect HTTP POSTs using curl with ZIP files.
 📄 Case study  
 [Curl_Exfiltration.txt](Case-Studies/Curl_Exfiltration.txt)  
 🛡 Sigma rule  
-[Curl Data Exfiltration.yaml](Sigma_Rules/Curl Data Exfiltration.yaml)
+[Curl Data Exfiltration.yaml](Sigma_Rules/Curl_Data_Exfiltration.yaml)
 
 ---
 
@@ -207,7 +207,7 @@ Detect mass file modifications with ransomware-style extensions using Sysmon Eve
 📄 Case study  
 [Ransomware_Encryption.txt](Case-Studies/Ransomware_Encryption.txt)  
 🛡 Sigma rule  
-[Ransomware File Encryption.yaml](Sigma_Rules/Ransomware File Encryption.yaml)
+[Ransomware File Encryption.yaml](Sigma_Rules/Ransomware_File_Encryption.yaml)
 
 ---
 # 🧭 MITRE ATT&CK Coverage
