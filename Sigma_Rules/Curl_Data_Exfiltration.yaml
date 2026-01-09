@@ -46,3 +46,4 @@ level: critical
 tags:
   - attack.exfiltration
   - attack.t1041   # Exfiltration Over C2 Channel
+
